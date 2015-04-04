@@ -7,7 +7,7 @@ MAINTAINER Richard Cuvillier <cuvill_r@etna-alternance.net>
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-  apt-get -y install supervisor apache2 libapache2-mod-php5 mysql-server php5-mysql pwgen php-apc php5-mcrypt nodejs npm ruby-full && \
+  apt-get -y install supervisor wget python-setuptools apache2 libapache2-mod-php5 mysql-server php5-mysql pwgen php-apc php5-mcrypt nodejs npm ruby-full && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN npm install angular
 
@@ -53,6 +53,7 @@ RUN \
   apt-get install -y mongodb-org && \
   rm -rf /var/lib/apt/lists/*
 
+RUN easy_install django
 
 EXPOSE 80 3306
 CMD ["/run.sh"]
