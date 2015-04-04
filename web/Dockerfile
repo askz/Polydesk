@@ -7,8 +7,9 @@ MAINTAINER Richard Cuvillier <cuvill_r@etna-alternance.net>
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-  apt-get -y install supervisor apache2 libapache2-mod-php5 mysql-server php5-mysql pwgen php-apc php5-mcrypt && \
+  apt-get -y install supervisor apache2 libapache2-mod-php5 mysql-server php5-mysql pwgen php-apc php5-mcrypt nodejs npm ruby-full && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
+RUN npm install angular
 
 # Add image configuration and scripts
 ADD start-apache2.sh /start-apache2.sh
