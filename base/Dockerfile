@@ -38,6 +38,10 @@ RUN dpkg-divert --local --rename --add /sbin/initctl && ln -sf /bin/true /sbin/i
 # Install GNOME and tightvnc server.
 RUN apt-get update && apt-get install -y xorg gnome-core gnome-session-fallback tightvncserver libreoffice
 
+# Install Polydesk base tools
+RUN add-apt-repository ppa:webupd8team/sublime-text-3 && apt-get update
+RUN apt-get install -y sublime-text-installer git subversion cvs gedit inkscape thunderbird chromium-browser
+
 # Pull in the hack to fix keyboard shortcut bindings for GNOME 3 under VNC
 ADD https://raw.githubusercontent.com/CannyComputing/Dockerfile-Ubuntu-Gnome/master/gnome-keybindings.pl /usr/local/etc/gnome-keybindings.pl
 RUN chmod +x /usr/local/etc/gnome-keybindings.pl
