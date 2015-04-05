@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM apkaz/polydesk-base:0.1
 
 MAINTAINER Richard Cuvillier <cuvill_r@etna-alternance.net>
 
@@ -54,6 +54,8 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 RUN easy_install django
+
+RUN chmod 777 /tmp
 
 EXPOSE 80 3306
 CMD ["/run.sh"]
