@@ -1,7 +1,7 @@
 
-div#home_box{
+/*div#home_box{
    display: none;
-}
+}*/
 div#logs_box{
    display: none;
 }
@@ -52,4 +52,7 @@ div#settings_box{
 
 .btn-group-radio > .btn {
   margin-left: -1px;
+}
+#row ul{
+    margin: 0 auto;
 }
