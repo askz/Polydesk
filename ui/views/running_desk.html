@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Polydesk</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index">Polydesk Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="new">New Desktop</a>
+                    </li>
+                    <li>
+
+                    <li>
+                        <a href="running">Running Desktops</a>
+                    </li>
+                    <li>
+
+               </ul>
+                      <form id="signin" class="navbar-form navbar-right" role="form">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                   </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+<script type="text/javascript">
+ 
+</script>
+
+    <!-- Content Section -->
+
+ <div class="container">
+  <div class="row"><br>
+    <div class="col-sm-3 text-success img-rounded" style=" margin-right: 97px; background-color:lavender;">
+
+
+                <ul>                  
+                    <li>
+                        <a id="" href="javascript:showonlyone('home_box');"><span class="glyphicon glyphicon-home">Home</span></a>
+                        
+                    </li>
+                    <li>
+                        <a id="" href="javascript:showonlyone('logs_box');"><span class="glyphicon glyphicon-copy"></span>Logs</a>
+                    </li>
+                    <li>
+                        <a id="" href="javascript:showonlyone('stats_box');"><span class="glyphicon glyphicon-signal"></span>Stats</a>
+                    </li>
+                    <li>        
+                        <a id="" href="javascript:showonlyone('settings_box');"><span class="glyphicon glyphicon-cog"></span>Settings</a>
+                    </li>
+               </ul>
+               <br>
+
+    </div>
+
+        <!-- HOME -->
+
+<script type="text/javascript">
+    function showonlyone(thechosenone) {
+     $("div[name*='infos']").each(function(index) {
+          if ($(this).attr("id") == thechosenone) {
+               $(this).show(0);
+          }
+          else {
+               $(this).hide(0);
+          }
+     });
+}
+</script>
+
+    <div  name="infos" id="home_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+        <h1>Polyweb</h1>
+        <button type="button" class="btn btn-success">Start</button>
+        <button type="button" class="btn btn-warning">Pause</button>
+        <button type="button" class="btn btn-danger">Stop</button><br>
+        <span>Running since 666 hours:66 minutes</span>
+    </div>
+   
+    <div  name="infos" id="logs_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+        <h1>Container logs</h1>
+        <span>Running since 666 hours:66 minutes</span><br>
+        <span>Running since 666 hours:66 minutes</span><br>
+        <span>Running since 666 hours:66 minutes</span><br>
+        <span>Running since 666 hours:66 minutes</span><br>
+        <span>Running since 666 hours:66 minutes</span><br>
+    </div>
+   
+
+    <div  name="infos" id="stats_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+        <h1>Container stats</h1>
+
+        <span>Running since 666 hours:66 minutes</span>
+        <span>Running since 666 hours:66 minutes</span>
+        <span>Running since 666 hours:66 minutes</span>
+        <span>Running since 666 hours:66 minutes</span>
+        <span>Running since 666 hours:66 minutes</span>
+    </div>
+
+
+
+            <div name="infos" id="settings_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+        <h1>Container settings</h1>
+        
+    </div>  
+  </div><br>
+
+
+  </div><br>
+
+
+
+
+
+
+</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Polydesk 2015</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
