@@ -1,4 +1,4 @@
-FROM apkaz/polydesk-base:0.1
+FROM apkaz/polydesk-base:0.2
 
 MAINTAINER Richard Cuvillier <cuvill_r@etna-alternance.net>
 
