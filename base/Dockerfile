@@ -69,6 +69,8 @@ RUN chmod 755 /*.sh
 ADD supervisord-vncserver.conf /etc/supervisor/conf.d/supervisord-vncserver.conf
 
 
+RUN sed 's/Exec=chromium-browser %U/Exec=chromium-browser %U --no-sandbox --user-data-dir/g' </usr/share/applications/chromium-browser.desktop >/usr/share/applications/chromium-browser.desktop
+
 # Define mountable directories.
 VOLUME ["/data"]
 
