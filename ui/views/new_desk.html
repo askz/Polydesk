@@ -15,6 +15,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="js/jquery.js" rel="application/javascript">
 
     <!-- Custom CSS -->
     <link href="css/full-width-pics.css" rel="stylesheet">
@@ -84,61 +85,54 @@
 
 
     <!-- Content Section -->
-     
-<div class="btn-group btn-group-radio">
 
 
-</div>
     <section >
         <div class="container">
+
+        <form>
             <div class="row">
-               
-            <div class="col-lg-12">
-                <h1 class="page-header">Choose your configuration</h1>
+                <div class="col-lg-12">
+                    <h1 class="page-header">Choose your configuration</h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <h5><input name="desktop" type="radio" id="optradio_comm">Common desktop</h5>
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/common.png" alt="">
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                    <h5><input name="desktop" type="radio" id="optradio_web">WEB Developer</h5>
+                    <a   class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/web_dev.png" alt="">
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                    <h5><input name="desktop" type="radio" id="optradio_dev">Developer desktop</h5>
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/code_dev.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                    <h5> <input name="desktop" type="radio" id="optradio_incognito">Incognito desktop </h5>
+                   
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/annonyman.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-2 col-md-4 col-xs-6 thumb">
+                    <h5><input name="desktop"  type="radio" id="optradio_office">Office suite desktop</h5>
+                    <a  class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/office_suite.jpg" alt="">
+                    </a>
+                </div>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <h5><input type="radio" id="optradio_comm">Common desktop</h5>
-
-                <a onclick="document.getElementById('optradio_comm').checked=true;" class="thumbnail" href="#">
-                    <img class="img-responsive" src="img/common.png" alt="">
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <h5><input type="radio" id="optradio_web">WEB Developer</h5>
-
-
-                <a  onclick="document.getElementById('optradio_web').checked=true;" class="thumbnail" href="#">
-                    <img class="img-responsive" src="img/web_dev.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <h5><input type="radio" id="optradio_dev">Developer desktop</h5>
-                
-                <a onclick="document.getElementById('optradio_dev').checked=true;"class="thumbnail" href="#">
-                    <img class="img-responsive" src="img/code_dev.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <h5> <input type="radio" id="optradio_incognito">Incognito desktop </h5>
-               
-                <a onclick="document.getElementById('optradio_incognito').checked=true;" class="thumbnail" href="#">
-                    <img class="img-responsive" src="img/annonyman.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-2 col-md-4 col-xs-6 thumb">
-                <h5><input  type="radio" id="optradio_office">Office suite desktop</h5>
-                
-
-                <a onclick="document.getElementById('optradio_office').checked=true;" class="thumbnail" href="#">
-                    <img class="img-responsive" src="img/office_suite.jpg" alt="">
-                </a>
-            </div>
-        </div>
-
-
-    <form>
 
         <div class="form-group">
 
@@ -201,7 +195,8 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.js">    </script>
+    <script type="text/javascript" src="js/new_desk.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
