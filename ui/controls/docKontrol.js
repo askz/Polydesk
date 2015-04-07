@@ -15,12 +15,11 @@ module.exports = {
     });
   },
 
-  getRunning: function() {
-    var docks = null;
-    Docker.listContainers(function (err, containers) {
-      docks = containers;
+  // 
+  getRunning: function (done) {
+    config.docker.listContainers(function (err, containers) {
+	done(err, containers);
     });
-    return docks;
   },
 
   restart: function(Id) {
