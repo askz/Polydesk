@@ -91,38 +91,49 @@
         </div>
 
             <!-- HOME -->
-
-        <div  name="infos" id="home_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
-         <h1>Polydesk - <%= desktops.Id %></h1>
-            <button type="button" class="btn btn-info">Enter
-                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-success">Start
-                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-warning">Pause
-                <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-danger">Stop
-                <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
-            </button>
-            <br><br>
-            <span id="uptime"></span>
+	<% desktops.forEach(function(el, i) { %>
+	<% if (i > 0) { %>
         </div>
-
-        <div  name="infos" id="logs_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
-            <h1>Container logs</h1>
+        <div class="row"><br>
+          <div class="col-sm-3" style="margin-right: 48px;">
+	  
+	  </div>
+        
+	<% } %>
+	<div  name="infos" id="home_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+          <h1>Polydesk - <%= el.Names + " " + el.Image  %> </h1>
+          <button type="button" class="btn btn-info">Enter
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-success">Start
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-warning">Pause
+          <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-danger">Stop
+          <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+          </button>
+          <br><br>
+          <span id="uptime"></span>
+      </div>
+      
+      <div  name="infos" id="logs_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+        <h1>Container logs</h1>
+      </div>
+      
+      <div  name="infos" id="stats_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+        <h1>Container stats</h1>
+      </div>
+      
+      <div name="infos" id="settings_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
+        <h1>Container settings</h1>
+      </div>
+      <% if (desktops[i+1] == null) { %>
         </div>
-
-        <div  name="infos" id="stats_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
-            <h1>Container stats</h1>
-        </div>
-
-        <div name="infos" id="settings_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
-            <h1>Container settings</h1>
-        </div>
-
-
+      <% }  %>
+      <% }); %>
+      
       </div>
     </div>
 
