@@ -9,8 +9,12 @@ router.get('/', function(req, res, next) {
 
 /* GET running desktops. */
 router.get('/running', function(req, res, next) {
-  var docKontrol = require('../controls/docKontrol');
-  res.render('running_desk', { title: 'Running Polydesks', desktops: docKontrol.getRunning() });
+    docKontrol.getRunning(function (err, containers) {
+	if (err)
+	    res.status(500).send(err);
+	else
+	    res.render('running_desk', { title: 'Running Polydesks', desktops: containers });
+    });
 });
 
 /* GET new desktop. */
