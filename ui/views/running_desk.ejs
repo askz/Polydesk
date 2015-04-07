@@ -74,41 +74,25 @@
     <div class="container">
       <div class="row"><br>
         <div class="col-sm-3 text-success img-rounded" style="  margin-right: 48px;  background-color:lavender;">
-            <ul style=" margin-top: 18px; ">
+            <ul id="running_nav" >
                 <li>
-                    <a id="" href="javascript:showonlyone('home_box');"><span class="glyphicon glyphicon-home">Home</span></a>
+                    <a id="running_nav" href="javascript:showonlyone('home_box');"><span class="glyphicon glyphicon-home"></span>   Home</a>
                 </li>
                 <li>
-                    <a id="" href="javascript:showonlyone('logs_box');"><span class="glyphicon glyphicon-copy"></span>Logs</a>
+                    <a id="running_nav" href="javascript:showonlyone('logs_box');"><span class="glyphicon glyphicon-copy"></span>   Logs</a>
                 </li>
                 <li>
-                    <a id="" href="javascript:showonlyone('stats_box');"><span class="glyphicon glyphicon-signal"></span>Stats</a>
+                    <a id="running_nav" href="javascript:showonlyone('stats_box');"><span class="glyphicon glyphicon-signal"></span>    Stats</a>
                 </li>
                 <li>
-                    <a id="" href="javascript:showonlyone('settings_box');"><span class="glyphicon glyphicon-cog"></span>Settings</a>
+                    <a id="running_nav" href="javascript:showonlyone('settings_box');"><span class="glyphicon glyphicon-cog"></span>    Settings</a>
                 </li>
            </ul>
         </div>
 
             <!-- HOME -->
 
-        <script type="text/javascript">
-            function showonlyone(thechosenone) {
-             $("div[name*='infos']").each(function(index) {
-                  if ($(this).attr("id") == thechosenone) {
-                       $(this).show(0);
-                  }
-                  else {
-                       $(this).hide(0);
-                  }
-             });
-        }
-        </script>
-
-
-
         <div  name="infos" id="home_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
-            <h1>Polydesk - <%= desktops.Id %></h1>
             <button type="button" class="btn btn-info">Enter
                 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
             </button>
@@ -132,8 +116,6 @@
         <div  name="infos" id="stats_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
             <h1>Container stats</h1>
         </div>
-
-
 
         <div name="infos" id="settings_box" class="col-sm-8 img-rounded" style="background-color:lavenderblush;">
             <h1>Container settings</h1>
@@ -163,6 +145,8 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- Polydesk JS -->
     <script type="text/javascript" src="js/running.js"></script>
+<!--     // <script type="text/javascript" src="js/running_desk.js"></script> -->
+
 </body>
 
 </html>
