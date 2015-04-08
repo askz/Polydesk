@@ -1,0 +1,8 @@
+#!/bin/bash
+
+count=$((`cat count` + 1))
+echo $count
+
+docker run -d -p $count:5901 polydesk/$1 > tmp
+echo $count > count
+echo "`cat tmp`:$count\n" >> list
