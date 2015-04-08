@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
   function showonlyone(thechosenone) {
     $("div[name*='infos']").each(function(index) {
        if ($(this).attr("id") == thechosenone) {
@@ -9,4 +9,3 @@ $(document).ready(function(){
         }
     });
   }
-});
