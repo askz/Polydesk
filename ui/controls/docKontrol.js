@@ -5,7 +5,8 @@ module.exports = {
   // Run new desktop
   runNew: function(name, type, password) {
     Docker.createContainer({
-      Image: config.docker.repo + config.docker.prefix + type,
+      Image: config.docker.repo + type,
+      name: name,
     }, function(err, container) {
       container.start({"PortBindings": {"5901/tcp": [
         {"HostPort": "5950"}
