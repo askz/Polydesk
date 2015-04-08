@@ -15,54 +15,54 @@ module.exports = {
     });
   },
 
-  // 
+  //
   getRunning: function (done) {
     config.docker.listContainers(function (err, containers) {
-	done(err, containers);
+      done(err, containers);
     });
   },
 
   restart: function(Id) {
-    Docker.listContainers(function (err, containers) {
+    config.docker.listContainers(function (err, containers) {
       containers.forEach(function (containerInfo) {
         if (containerInfo.Id === Id)
-          Docker.getContainer(containerInfo.Id).restart(cb);
+          config.docker.getContainer(containerInfo.Id).restart(cb);
       });
     });
   },
 
   pause: function(Id) {
-    Docker.listContainers(function (err, containers) {
+    config.docker.listContainers(function (err, containers) {
       containers.forEach(function (containerInfo) {
         if (containerInfo.Id === Id)
-          Docker.getContainer(containerInfo.Id).pause(cb);
+          config.docker.getContainer(containerInfo.Id).pause(cb);
       });
     });
   },
 
   unpause: function(Id) {
-    Docker.listContainers(function (err, containers) {
+    config.docker.listContainers(function (err, containers) {
       containers.forEach(function (containerInfo) {
         if (containerInfo.Id === Id)
-          Docker.getContainer(containerInfo.Id).unpause(cb);
+          config.docker.getContainer(containerInfo.Id).unpause(cb);
       });
     });
   },
 
   start: function(Id) {
-    Docker.listContainers(function (err, containers) {
+    config.docker.listContainers(function (err, containers) {
       containers.forEach(function (containerInfo) {
         if (containerInfo.Id === Id)
-          Docker.getContainer(containerInfo.Id).start(cb);
+          config.docker.getContainer(containerInfo.Id).start(cb);
       });
     });
   },
 
   stop: function(Id) {
-    Docker.listContainers(function (err, containers) {
+    config.docker.listContainers(function (err, containers) {
       containers.forEach(function (containerInfo) {
         if (containerInfo.Id === Id)
-          Docker.getContainer(containerInfo.Id).stop(cb);
+          config.docker.getContainer(containerInfo.Id).stop(cb);
       });
     });
   },
