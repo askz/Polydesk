@@ -16,7 +16,7 @@ module.exports = {
     });
   },
 
-  //
+  // Get running containers
   getRunning: function (done) {
     config.docker.listContainers(function (err, containers) {
       done(err, containers);
