@@ -1,0 +1,72 @@
+  <form>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Choose your configuration</h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <h5><input type="radio" id="optradio_comm">Common desktop</h5>
+                    <a  class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/common.png" alt="">
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                    <h5><input type="radio" id="optradio_web">WEB Developer</h5>
+                    <a   class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/web_dev.png" alt="">
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                    <h5><input type="radio" id="optradio_dev">Developer desktop</h5>
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/code_dev.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                    <h5> <input type="radio" id="optradio_incognito">Incognito desktop </h5>
+                   
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/annonyman.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-2 col-md-4 col-xs-6 thumb">
+                    <h5><input  type="radio" id="optradio_office">Office suite desktop</h5>
+                    <a  class="thumbnail" href="#">
+                        <img class="img-responsive" src="img/office_suite.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <script src="js/jquery.js">
+                $('.thumb').click(function() {
+                    $(this).find('input:radio')[0].checked = true;
+                    console.log('clicked');  
+                });
+            </script>
+
+
+        <div class="form-group">
+
+            <label for="inputVmName">Desktop name</label>
+
+            <input  class="form-control" id="inputEmail" placeholder="Please enter the name for your virtual desktop">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="inputPassword">Password</label>
+
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+        </div>
+
+        
+
+        <button type="submit" class="btn btn-primary">Create Desktop</button>
+
+    </form>
