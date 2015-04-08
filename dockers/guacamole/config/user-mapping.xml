@@ -1,10 +1,34 @@
 <user-mapping>
-	<authorize username="test1" password="test1">
-		<connection name="Test1">
+	<authorize username="max" password="ubuntu">
+		<connection name="Polybase">
 			<protocol>vnc</protocol>
 			<param name="hostname">zkp.fr</param>
 			<param name="port">5901</param>
 			<param name="password">ubuntu</param>
 		</connection>
-	</authorize>
+    <connection name="Polyweb">
+      <protocol>vnc</protocol>
+      <param name="hostname">zkp.fr</param>
+      <param name="port">5902</param>
+      <param name="password">ubuntu</param>
+    </connection>
+    <connection name="Polydev">
+      <protocol>vnc</protocol>
+      <param name="hostname">zkp.fr</param>
+      <param name="port">5903</param>
+      <param name="password">ubuntu</param>
+    </connection>
+    <connection name="Polhyde">
+      <protocol>vnc</protocol>
+      <param name="hostname">zkp.fr</param>
+      <param name="port">5904</param>
+      <param name="password">ubuntu</param>
+    </connection>
+    <connection name="Polytasks">
+      <protocol>vnc</protocol>
+      <param name="hostname">zkp.fr</param>
+      <param name="port">5905</param>
+      <param name="password">ubuntu</param>
+    </connection>
+  </authorize>
 </user-mapping>

@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-# thanks to kolypto @ serverfault for this script.
+# thanks to kolypto @ serverfault for the idea.
 # since vncserver is running as a daemon, we're creating a foreground process uppon vncserver for supervisord.
 
 set -eu
